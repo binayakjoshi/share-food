@@ -18,7 +18,7 @@ Share Food is a learning demo application built with Next.js App Router followin
    ```bash
    git clone https://github.com/binayakjoshi/share-food.git
    cd share-food
-````
+```
 
 2. **Install dependencies**
 
