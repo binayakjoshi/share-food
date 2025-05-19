@@ -8,7 +8,16 @@ type MealDetailProps = {
     slug: string;
   };
 };
+export const generateMetadata = async ({ params }: MealDetailProps) => {
+  const { slug } = await params;
 
+  const meal = (await getMeal(slug)) as MealType;
+  if (!meal) notFound();
+  return {
+    title: meal.title,
+    description: meal.summary,
+  };
+};
 const MealDetail = async ({ params }: MealDetailProps) => {
   const { slug } = await params;
 
