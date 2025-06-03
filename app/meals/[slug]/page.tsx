@@ -4,9 +4,7 @@ import { type MealDB as MealType } from "@/components/meals/meal-type";
 import classes from "./page.module.css";
 import { notFound } from "next/navigation";
 type MealDetailProps = {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }>;
 };
 export const generateMetadata = async ({ params }: MealDetailProps) => {
   const { slug } = await params;
